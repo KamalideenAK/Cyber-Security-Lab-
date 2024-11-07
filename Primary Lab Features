@@ -1,0 +1,11 @@
+
+Microsoft Advanced Threat Analytics (https://www.microsoft.com/en-us/cloud-platform/advanced-threat-analytics) is installed on the WEF machine, with the lightweight ATA gateway installed on the DC
+A Splunk forwarder is pre-installed and all indexes are pre-created. Technology add-ons are also preconfigured.
+A custom Windows auditing configuration is set via GPO to include command line process auditing and additional OS-level logging
+Palantir's Windows Event Forwarding subscriptions and custom channels are implemented
+Powershell transcript logging is enabled. All logs are saved to \\wef\pslogs
+osquery comes installed on each host and is pre-configured to connect to a Fleet server via TLS. Fleet is preconfigured with the configuration from Palantir's osquery Configuration
+Sysmon is installed and configured using Olaf Hartong's open-sourced Sysmon configuration
+All autostart items are logged to Windows Event Logs via AutorunsToWinEventLog
+Zeek and Suricata are pre-configured to monitor and alert on network traffic
+Apache Guacamole is installed to easily access all hosts from your local browser
